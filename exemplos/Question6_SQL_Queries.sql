@@ -243,29 +243,7 @@ LEFT JOIN Orders o ON s.ID = o.salesperson_id
 GROUP BY s.ID, s.Name
 ORDER BY Total_Sales DESC;
 
-/**
- * RESULTADO ESPERADO (baseado nos dados):
- * 
- * Calculando vendas por salesperson:
- * - Abe (ID=1): Order 30 (460) = 460
- * - Bob (ID=2): Orders 10 (540) + 40 (2400) = 2940
- * - Chris (ID=5): Nenhum pedido = 0 ✓
- * - Dan (ID=7): Orders 50 (600) + 60 (720) + 70 (150) = 1470
- * - Ken (ID=8): Order 20 (1800) = 1800
- * - Joe (ID=11): Nenhum pedido = 0 ✓
- * 
- * Resultado ordenado:
- * +----+-------+-------------+
- * | ID | Name  | Total_Sales |
- * +----+-------+-------------+
- * | 2  | Bob   | 2940        |
- * | 8  | Ken   | 1800        |
- * | 7  | Dan   | 1470        |
- * | 1  | Abe   | 460         |
- * | 5  | Chris | 0           | ← Incluído com 0
- * | 11 | Joe   | 0           | ← Incluído com 0
- * +----+-------+-------------+
- */
+
 
 /**
  * VERSÃO COM FORMATAÇÃO E INFORMAÇÕES ADICIONAIS:
